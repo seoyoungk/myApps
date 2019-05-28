@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 
 extension MainViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let coordi = manager.location?.coordinate {
             let latitude = coordi.latitude
@@ -33,9 +34,12 @@ extension MainViewController: CLLocationManagerDelegate {
                     
                     // 근접 측정소 찾는 클래스 객체 생성, 함수 호출
                     stationLists.stationListURL(TM_x: TM_x, TM_y: TM_y)
-                    let result = stationLists.extractStationName(stationLists.lists)
+                    var resultStationName = stationLists.extractStationName(stationLists.stationlists) as! [String]
                     
-                    NSLog("latitude = \(latitude), longtitude = \(longtitude), locationData = \(self.locationData), TM_x = \(TM_x), TM_y = \(TM_y), \(result ?? "")")
+//                    NSLog("latitude = \(latitude), longtitude = \(longtitude), locationData = \(self.locationData), TM_x = \(TM_x), TM_y = \(TM_y), \(result ?? "")")
+                    
+                    // 현재 위치 label에 넣는다
+                    self.currentLocationLabel.text = resultStationName[0]
                     
                     return
                 }

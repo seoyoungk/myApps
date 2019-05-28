@@ -9,13 +9,13 @@
 import Foundation
 import CoreData
 
-class LocationData: XMLParser, XMLParserDelegate {
+class LocationData: MainViewController {
     let locationVO = LocationVO()
     
-    var lists = [[String: Any]]()
-    var list = [String: Any]()
-    var elementTemp: String = ""
-    var blank: Bool = false
+    var stationlists = [[String: Any]]()
+    var stationlist = [String: Any]()
+    var stationelementTemp: String = ""
+    var stationblank: Bool = false
     
     
     func stationListURL(TM_x: Any, TM_y: Any) {
@@ -32,39 +32,42 @@ class LocationData: XMLParser, XMLParserDelegate {
         }
         
         parser.delegate = self
+        if (parser.parse()){
+            NSLog("stationURL parsed!!!!!!")
+        }
         
-//    }
-    
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        elementTemp = elementName
-        blank = true
     }
     
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        if blank == true && elementTemp != "response" && elementTemp != "header" && elementTemp != "resultCode" && elementTemp != "resultMsg" && elementTemp != "body" {
+    override func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        stationelementTemp = elementName
+        stationblank = true
+    }
+    
+    override func parser(_ parser: XMLParser, foundCharacters string: String) {
+        if stationblank == true && stationelementTemp != "response" && stationelementTemp != "header" && stationelementTemp != "resultCode" && stationelementTemp != "resultMsg" && stationelementTemp != "body" {
             
-            list[elementTemp] = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            stationlist[stationelementTemp] = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
         #if DEBUG
             print("string: \(string)")
-            print("item: \(list)")
+            print("item: \(stationlist)")
         #endif
     }
     
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    override func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item" {
-            lists += [list]
+            stationlists += [stationlist]
         }
-        blank = false
+        stationblank = false
         
         #if DEBUG
         print("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ파싱 리스트 결과ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ")
-        print("lists = \(lists)")
+        print("lists = \(stationlists)")
         #endif
         
     }
 
-  }
+//  }
     
     func extractStationName(_ data: Any?) -> Any? {
         guard let items = data as? [[String: Any]] else {

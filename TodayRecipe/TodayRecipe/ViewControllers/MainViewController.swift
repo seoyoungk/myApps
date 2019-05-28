@@ -13,6 +13,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
     var airPollutionData = AirPollutionData()
     var airPollutionCount = 6
     var locationData = LocationVO()
+//    var resultStationName = [String]()
     
     enum AirPollutionIndex: Int {
         case khai, pm10, co, no2, o3, so2
@@ -46,14 +47,13 @@ class MainViewController: UIViewController, XMLParserDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingLocation()
-        
-        
+
     }
     
     // 미세먼지 API를 호출하는 메소드
     func cellAirAPI() {
         let key = "Mj2lJctNluJLoMz0XV5F8XU0cGhTI2xNmVjB4fk%2BbojkGWq8%2F6PpOHbMVYrIKAxLQk8NgR7kPnJ%2BPD08HKqBEQ%3D%3D"
-        let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EA%B0%95%EB%82%A8%EA%B5%AC&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)&ever=1.3"
+        let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EA%B0%95%EB%82%A8%EA%B5%AC&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
 
         guard let url = URL(string: urlString) else {
             #if DEBUG
