@@ -190,6 +190,7 @@
                     <connections>
                         <outlet property="collectionView" destination="sRi-DK-FCK" id="1KT-PH-l1z"/>
                         <outlet property="currentConditionLabel" destination="kpt-1f-c7c" id="j8V-6P-VJk"/>
+                        <outlet property="currentLocationLabel" destination="hcz-qI-YEt" id="NBP-v5-IRQ"/>
                         <outlet property="currentTimeLabel" destination="ByD-gs-p0X" id="BMO-tW-t0k"/>
                     </connections>
                 </viewController>

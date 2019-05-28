@@ -9,6 +9,7 @@
 import Foundation
 
 struct AirPollutionVO {
+    var stationName: String?
     var dataTime: String? // 측정시간
     
     var khaiValue: String? // 통합대기환경수치

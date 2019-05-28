@@ -45,7 +45,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-                <string>com.googleusercontent.apps.634057378178-71t64en5aaglh6l9d0bq4sqpb9vvg9sj</string>
+				<string>com.googleusercontent.apps.634057378178-71t64en5aaglh6l9d0bq4sqpb9vvg9sj</string>
 			</array>
 		</dict>
 	</array>
@@ -54,7 +54,7 @@
 	<key>FacebookAppID</key>
 	<string>657425501369602</string>
 	<key>FacebookDisplayName</key>
-	<string>Today's recipe</string>
+	<string>Today&apos;s recipe</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>777406297ef0059738b4a3d795979c07</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -99,5 +99,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The application uses location information</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The application uses location information always</string>
 </dict>
 </plist>
