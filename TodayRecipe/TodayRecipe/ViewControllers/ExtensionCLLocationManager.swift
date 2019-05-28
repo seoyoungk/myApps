@@ -15,6 +15,9 @@ extension MainViewController: CLLocationManagerDelegate {
             let latitude = coordi.latitude
             let longtitude = coordi.longitude
             
+            let stationLists = LocationData()
+            let coordinates = Transition()
+            
             let currentLocation = CLLocation(latitude: latitude, longitude: longtitude)
             let geocoder = CLGeocoder()
             
@@ -24,7 +27,16 @@ extension MainViewController: CLLocationManagerDelegate {
                 }
                 if let currentLocationData: LocationVO = self.createCurrentLocationData(currentLocation, placemark: placemark) {
                     self.locationData = currentLocationData
-                    NSLog("latitude = \(latitude), longtitude = \(longtitude), locationData = \(self.locationData)")
+                    let (TM_x, TM_y) = coordinates.convertToPlaneRect(latitude: latitude, longitude: longtitude)
+                    self.locationData.TM_x = TM_x
+                    self.locationData.TM_y = TM_y
+                    
+                    // 근접 측정소 찾는 클래스 객체 생성, 함수 호출
+                    stationLists.stationListURL(TM_x: TM_x, TM_y: TM_y)
+                    let result = stationLists.extractStationName(stationLists.lists)
+                    
+                    NSLog("latitude = \(latitude), longtitude = \(longtitude), locationData = \(self.locationData), TM_x = \(TM_x), TM_y = \(TM_y), \(result ?? "")")
+                    
                     return
                 }
                 

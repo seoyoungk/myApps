@@ -58,6 +58,7 @@
 		1DA1E6C1229D060D00FE1752 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1E6C0229D060D00FE1752 /* libc++.tbd */; };
 		1DA1E6C3229D062100FE1752 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1E6C2229D062100FE1752 /* libsqlite3.tbd */; };
 		1DA1E6C5229D062F00FE1752 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1E6C4229D062F00FE1752 /* libxml2.tbd */; };
+		1DA1E6C7229D19F800FE1752 /* transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E6C6229D19F800FE1752 /* transition.swift */; };
 		3526AE676CA394F67C15BCCF /* Pods_TodayRecipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B68953D56C48C6FAC28E9 /* Pods_TodayRecipe.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		1DA1E6C0229D060D00FE1752 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1DA1E6C2229D062100FE1752 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1DA1E6C4229D062F00FE1752 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		1DA1E6C6229D19F800FE1752 /* transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transition.swift; sourceTree = "<group>"; };
 		1F223DCB5FC27A8E4DD2B567 /* Pods-TodayRecipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayRecipe.release.xcconfig"; path = "Target Support Files/Pods-TodayRecipe/Pods-TodayRecipe.release.xcconfig"; sourceTree = "<group>"; };
 		845BA0D5D4E96553C23BE6E0 /* Pods-TodayRecipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayRecipe.debug.xcconfig"; path = "Target Support Files/Pods-TodayRecipe/Pods-TodayRecipe.debug.xcconfig"; sourceTree = "<group>"; };
 		CC8B68953D56C48C6FAC28E9 /* Pods_TodayRecipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayRecipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 				1DA1E6072296F38B00FE1752 /* AirData.swift */,
 				1DA1E66B229CFD8500FE1752 /* LocationVO.swift */,
 				1DA1E66D229CFD9E00FE1752 /* LocationData.swift */,
+				1DA1E6C6229D19F800FE1752 /* transition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				1DA1E670229CFE8100FE1752 /* ExtensionCollectionViewController.swift in Sources */,
 				1DA1E5B822959C2B00FE1752 /* AppDelegate.swift in Sources */,
 				1DA1E5FC2296C7B100FE1752 /* MainViewController.swift in Sources */,
+				1DA1E6C7229D19F800FE1752 /* transition.swift in Sources */,
 				1DA1E6082296F38B00FE1752 /* AirData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
