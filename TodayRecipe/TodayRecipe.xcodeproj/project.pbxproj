@@ -209,6 +209,7 @@
 		1DA1E5FD2296C7D500FE1752 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				1DA1E6C6229D19F800FE1752 /* transition.swift */,
 				1DA1E5E1229645B600FE1752 /* Assets.xcassets */,
 				1DA1E5B722959C2B00FE1752 /* AppDelegate.swift */,
 				1DA1E5F92296A38100FE1752 /* credentials.plist */,
@@ -240,7 +241,6 @@
 				1DA1E6072296F38B00FE1752 /* AirData.swift */,
 				1DA1E66B229CFD8500FE1752 /* LocationVO.swift */,
 				1DA1E66D229CFD9E00FE1752 /* LocationData.swift */,
-				1DA1E6C6229D19F800FE1752 /* transition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

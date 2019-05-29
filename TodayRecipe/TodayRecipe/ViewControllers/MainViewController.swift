@@ -13,8 +13,6 @@ class MainViewController: UIViewController, XMLParserDelegate {
     var airPollutionData = AirPollutionData()
     var airPollutionCount = 6
     
-    var result: String = ""
-    
     enum AirPollutionIndex: Int {
         case khai, pm10, co, no2, o3, so2
     }
@@ -55,12 +53,9 @@ class MainViewController: UIViewController, XMLParserDelegate {
         let key = "Mj2lJctNluJLoMz0XV5F8XU0cGhTI2xNmVjB4fk%2BbojkGWq8%2F6PpOHbMVYrIKAxLQk8NgR7kPnJ%2BPD08HKqBEQ%3D%3D"
         let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EA%B0%95%EB%82%A8%EA%B5%AC&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
         
-//        NSLog("result = \(self.result)")
-        
-        let finalURL = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=\(result)&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
-        
-        NSLog("finalURL = \(finalURL)")
-        
+
+//        let finalURL = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=\(result)&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
+
         guard let url = URL(string: urlString) else {
             #if DEBUG
             print("URL error!")
@@ -70,7 +65,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
         guard let parser = XMLParser(contentsOf: url) else {
             return
         }
-        
+
         parser.delegate = self
         if (parser.parse()) {
             #if DEBUG
@@ -81,7 +76,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
             currentTimeLabel.text = dateFormatter.string(from: date)
-            
+
         }
     }
     

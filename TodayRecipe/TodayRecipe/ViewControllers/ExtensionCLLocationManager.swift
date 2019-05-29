@@ -24,9 +24,8 @@ extension MainViewController: CLLocationManagerDelegate {
             currentStation.getTM()
             
             // 현재 위치 label에 넣는다
-            currentLocationLabel.text = locationVO.stationLists.first
-            self.result = locationVO.stationLists.first ?? ""
-            NSLog("result = \(self.result)")
+            currentLocationLabel.text = locationVO.stationLists.first         
+            
         }
     }
             
