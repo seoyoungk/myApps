@@ -15,19 +15,21 @@ extension MainViewController: CLLocationManagerDelegate {
         if let coordi = manager.location?.coordinate {
             let latitude = coordi.latitude
             let longtitude = coordi.longitude
+            // locationData에 위도, 경도 정보 넣기
+            locationData.latitude = latitude
+            locationData.longtitude = longtitude
             
-            let locationVO = LocationVO.sharedInstance
-            locationVO.latitude = latitude
-            locationVO.longtitude = longtitude
-            
+            // 위도, 경도를 TM_x, TM_y로 변환 후 근접 측정소 목록 뽑아온다
             let currentStation = CurrentStationName()
             currentStation.getTM()
-            
+     
             // 현재 위치 label에 넣는다
-            currentLocationLabel.text = locationVO.stationLists.first         
-            
+            let result = currentStation.locationVO.stationLists.first
+            currentLocationLabel.text = result
+
         }
-    }
+    }  
             
 }
-            
+
+

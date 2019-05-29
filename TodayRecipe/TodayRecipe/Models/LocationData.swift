@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+// TM_x, TM_y를 이용하여 근접 측정소 목록 api 호출
 class LocationData: MainViewController {
     
     var stationlists = [[String: Any]]()
@@ -65,9 +66,8 @@ class LocationData: MainViewController {
         #endif
         
     }
-
-//  }
     
+    // 측정소 stationName만 뽑아내기
     func extractStationName(_ data: Any?) -> Any? {
         guard let items = data as? [[String: Any]] else {
             return nil

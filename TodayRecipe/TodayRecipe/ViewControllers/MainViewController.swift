@@ -22,6 +22,9 @@ class MainViewController: UIViewController, XMLParserDelegate {
     var elementTemp: String = ""
     var blank: Bool = false
     
+    // locationData 선언  -> extension에서 값 저장해줌
+    let locationData = LocationVO.sharedInstance
+    
     var locationManager: CLLocationManager!
     
     @IBOutlet weak var currentLocationLabel: UILabel!
@@ -35,7 +38,14 @@ class MainViewController: UIViewController, XMLParserDelegate {
         
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self
+        // 미세먼지 API를 호출
         cellAirAPI()
+
+        // 현재 시각
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        currentTimeLabel.text = dateFormatter.string(from: date)
         
         locationManager = CLLocationManager()
         locationManager.delegate = self as CLLocationManagerDelegate
@@ -46,15 +56,18 @@ class MainViewController: UIViewController, XMLParserDelegate {
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingLocation()
         
+        
     }
+    
     
     // 미세먼지 API를 호출하는 메소드
     func cellAirAPI() {
+        // func cellAirAPI(data: Any){
         let key = "Mj2lJctNluJLoMz0XV5F8XU0cGhTI2xNmVjB4fk%2BbojkGWq8%2F6PpOHbMVYrIKAxLQk8NgR7kPnJ%2BPD08HKqBEQ%3D%3D"
         let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EA%B0%95%EB%82%A8%EA%B5%AC&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
         
-
-//        let finalURL = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=\(result)&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
+//        finalURL에 locationData에서 얻은 측정소 이름을 넣어서 호출
+//        let finalURL = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=\(data)&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
 
         guard let url = URL(string: urlString) else {
             #if DEBUG
@@ -71,11 +84,6 @@ class MainViewController: UIViewController, XMLParserDelegate {
             #if DEBUG
             print("Successfully Parsed")
             #endif
-            // 현재 시간
-            let date = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-            currentTimeLabel.text = dateFormatter.string(from: date)
 
         }
     }
