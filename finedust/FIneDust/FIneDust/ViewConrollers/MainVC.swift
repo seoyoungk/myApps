@@ -26,7 +26,8 @@ class MainViewController: UIViewController, XMLParserDelegate {
     let locationData = LocationVO.sharedInstance
     
     var locationManager: CLLocationManager!
-    
+    var refreshControl: UIRefreshControl!
+
     @IBOutlet weak var currentConditionImage: UIImageView!
     @IBOutlet weak var currentStationLabel: UILabel!
     @IBOutlet weak var currentLocationLabel: UILabel!
@@ -34,10 +35,24 @@ class MainViewController: UIViewController, XMLParserDelegate {
     @IBOutlet weak var currentConditionLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // refreshControl / 당겨서 새로 고침
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.white
+        
+        // refreshControl 액션에 대한 행위 정의
+        refreshControl.attributedTitle = NSAttributedString(string: "당겨서 아래로 새로고침")
+        refreshControl.addTarget(self, action: #selector(self.pullToRefresh), for: .valueChanged)
+
+        if #available(iOS 10.0, *) {
+            scrollView.refreshControl = refreshControl
+        } else {
+            scrollView.addSubview(refreshControl)
+        }
         
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self
@@ -59,6 +74,13 @@ class MainViewController: UIViewController, XMLParserDelegate {
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingLocation()
         
+        
+    }
+    // refreshControl 액션
+    @objc func pullToRefresh() {
+        callAirAPI()
+        // locationManager()
+        refreshControl.endRefreshing()
         
     }
     
