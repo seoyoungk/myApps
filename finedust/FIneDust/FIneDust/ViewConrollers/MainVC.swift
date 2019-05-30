@@ -27,6 +27,8 @@ class MainViewController: UIViewController, XMLParserDelegate {
     
     var locationManager: CLLocationManager!
     
+    @IBOutlet weak var currentConditionImage: UIImageView!
+    @IBOutlet weak var currentStationLabel: UILabel!
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var currentConditionLabel: UILabel!
@@ -40,7 +42,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self
         // 미세먼지 API를 호출
-        cellAirAPI()
+        callAirAPI()
         
         // 현재 시각
         let date = Date()
@@ -62,7 +64,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
     
     
     // 미세먼지 API를 호출하는 메소드
-    func cellAirAPI() {
+    func callAirAPI() {
         // func cellAirAPI(data: Any){
         let key = "Mj2lJctNluJLoMz0XV5F8XU0cGhTI2xNmVjB4fk%2BbojkGWq8%2F6PpOHbMVYrIKAxLQk8NgR7kPnJ%2BPD08HKqBEQ%3D%3D"
         let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?stationName=%EA%B0%95%EB%82%A8%EA%B5%AC&dataTerm=month&pageNo=1&numOfRows=10&ServiceKey=\(key)"
@@ -81,6 +83,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
         }
         
         parser.delegate = self
+        
         if (parser.parse()) {
             #if DEBUG
             print("Successfully Parsed")
@@ -88,7 +91,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
             
         }
     }
-    
+    // xml parser
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         elementTemp = elementName
         blank = true
@@ -116,9 +119,9 @@ class MainViewController: UIViewController, XMLParserDelegate {
         print("lists = \(lists)")
         #endif
         
-        currentConditionLabel.text = airPollutionData.currentData(lists)?.khaiGrade ?? ""
+        // 현재 대기상태 label 업데이트
+        currentConditionLabel.text = airPollutionData.getCurrentData(lists)?.khaiGrade ?? ""
     }
-    
     
 }
 
@@ -139,7 +142,8 @@ extension MainViewController: CLLocationManagerDelegate {
             
             // 현재 위치 label에 넣는다
             let result = currentStation.locationVO.stationLists.first
-            currentLocationLabel.text = result
+            currentStationLabel.text = result
+            currentLocationLabel.text = currentStation.locationVO.location
             
         }
     }
@@ -148,7 +152,6 @@ extension MainViewController: CLLocationManagerDelegate {
 
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return airPollutionCount
     }
@@ -159,28 +162,28 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch indexPath.row {
         case AirPollutionIndex.khai.rawValue:
             cell.typeLabel.text = "통합대기환경"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.khaiGrade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.khaiValue ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.khaiGrade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.khaiValue ?? ""
         case AirPollutionIndex.pm10.rawValue:
             cell.typeLabel.text = "미세먼지"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.pm10Grade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.pm10Value ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.pm10Grade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.pm10Value ?? ""
         case AirPollutionIndex.co.rawValue:
             cell.typeLabel.text = "일산화탄소"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.coGrade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.coValue ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.coGrade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.coValue ?? ""
         case AirPollutionIndex.no2.rawValue:
             cell.typeLabel.text = "이산화탄소"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.no2Grade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.no2Value ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.no2Grade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.no2Value ?? ""
         case AirPollutionIndex.o3.rawValue:
             cell.typeLabel.text = "오존"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.o3Grade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.o3Value ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.o3Grade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.o3Value ?? ""
         case AirPollutionIndex.so2.rawValue:
             cell.typeLabel.text = "아황산가스"
-            cell.conditionLabel.text = airPollutionData.currentData(lists)?.so2Grade ?? ""
-            cell.valueLabel.text = airPollutionData.currentData(lists)?.so2Value ?? ""
+            cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.so2Grade ?? ""
+            cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.so2Value ?? ""
             
         default: break
         }

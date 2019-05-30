@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-// TM_x, TM_y를 이용하여 근접 측정소 목록 api 호출
+
 class LocationData: MainViewController {
     
     var stationlists = [[String: Any]]()
@@ -17,8 +17,8 @@ class LocationData: MainViewController {
     var stationelementTemp: String = ""
     var stationblank: Bool = false
     
-    
-    func stationListURL(TM_x: Any, TM_y: Any) {
+    // TM_x, TM_y를 이용하여 근접 측정소 목록 api 호출
+    func callStationListAPI(TM_x: Any, TM_y: Any) {
         let key = "Mj2lJctNluJLoMz0XV5F8XU0cGhTI2xNmVjB4fk%2BbojkGWq8%2F6PpOHbMVYrIKAxLQk8NgR7kPnJ%2BPD08HKqBEQ%3D%3D"
         let urlString = "http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getNearbyMsrstnList?tmX=\(TM_x)&tmY=\(TM_y)&ServiceKey=\(key)"
         

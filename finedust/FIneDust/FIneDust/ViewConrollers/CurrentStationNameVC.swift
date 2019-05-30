@@ -11,11 +11,11 @@ import CoreLocation
 import CoreData
 
 class CurrentStationName: MainViewController {
-    let stationLists = LocationData()
-    let coordinates = Transition()
+    let stationLists = LocationData() // 근접 측정소 찾는 api 및 station 이름을 호출하는 클래스
+    let coordinates = Transition() // latitude, longtitude -> TM_x, TM_y로 변환해주는 클래스
     let locationVO = LocationVO.sharedInstance
     
-    // 위도, 경도 -> TM_x, TM_y로 변환해서 근접 측정소 불러오는 함수
+    // 위도, 경도를 이용하여 근접 측정소를 찾는 url을 만들어 api 를 호출하고 최종 근접 측정소를 찾는 함수
     func getTM() {
         
         let currentLocation = CLLocation(latitude: locationVO.latitude, longitude: locationVO.longtitude)
@@ -36,7 +36,7 @@ class CurrentStationName: MainViewController {
                 self.locationVO.location = currentLocationData.location
                 
                 // 근접 측정소 찾는 클래스 객체 생성, 함수 호출
-                self.stationLists.stationListURL(TM_x: TM_x, TM_y: TM_y)
+                self.stationLists.callStationListAPI(TM_x: TM_x, TM_y: TM_y)
                 self.locationVO.stationLists = self.stationLists.extractStationName(self.stationLists.stationlists) as! [String]
                 
                 return

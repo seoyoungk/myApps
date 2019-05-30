@@ -13,6 +13,7 @@ class AirPollutionCell: UICollectionViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var conditionImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

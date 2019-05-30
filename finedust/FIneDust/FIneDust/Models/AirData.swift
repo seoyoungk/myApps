@@ -14,7 +14,7 @@ class AirPollutionData {
         case dataTime, khaiValue, pm10Value, no2Value, coValue, o3Value, so2Value, khaiGrade, so2Grade, coGrade, o3Grade, no2Grade, pm10Grade
     }
     
-    func currentData(_ data: Any) -> AirPollutionVO? {
+    func getCurrentData(_ data: Any) -> AirPollutionVO? {
         guard let items = data as? [[String: Any]],
             let item = items.first else {
                 return nil
