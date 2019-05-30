@@ -38,6 +38,9 @@ class MainViewController: UIViewController, XMLParserDelegate {
         
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self
+        
+        locationManager(locationManager, didUpdateLocations: )
+        
         // 미세먼지 API를 호출
         cellAirAPI()
 
