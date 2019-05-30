@@ -121,6 +121,18 @@ class MainViewController: UIViewController, XMLParserDelegate {
         
         // 현재 대기상태 label 업데이트
         currentConditionLabel.text = airPollutionData.getCurrentData(lists)?.khaiGrade ?? ""
+        // 현재 대기상태 image 업데이트
+        if airPollutionData.getCurrentData(lists)?.khaiGrade == "좋음" {
+            currentConditionImage.image = UIImage(named: "01good.png")
+        } else if airPollutionData.getCurrentData(lists)?.khaiGrade == "보통" {
+            currentConditionImage.image = UIImage(named: "02nomal.png")
+        } else if airPollutionData.getCurrentData(lists)?.khaiGrade == "나쁨" {
+            currentConditionImage.image = UIImage(named: "03bad.png")
+        } else if airPollutionData.getCurrentData(lists)?.khaiGrade == "매우나쁨" {
+            currentConditionImage.image = UIImage(named: "04sucks.png")
+        } else {
+            currentConditionImage.image = nil
+        }
     }
     
 }
@@ -164,6 +176,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.typeLabel.text = "통합대기환경"
             cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.khaiGrade ?? ""
             cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.khaiValue ?? ""
+            
         case AirPollutionIndex.pm10.rawValue:
             cell.typeLabel.text = "미세먼지"
             cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.pm10Grade ?? ""
@@ -185,6 +198,20 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.conditionLabel.text = airPollutionData.getCurrentData(lists)?.so2Grade ?? ""
             cell.valueLabel.text = airPollutionData.getCurrentData(lists)?.so2Value ?? ""
             
+        default: break
+        }
+        
+        switch cell.conditionLabel.text {
+        case "좋음":
+            cell.conditionImage.image = UIImage(named: "01good.png")
+        case "보통":
+            cell.conditionImage.image = UIImage(named: "02nomal.png")
+        case "나쁨":
+            cell.conditionImage.image = UIImage(named: "03bad.png")
+        case "매우나쁨":
+            cell.conditionImage.image = UIImage(named: "04sucks.png")
+        case "정보없음":
+            cell.conditionImage.image = nil
         default: break
         }
         

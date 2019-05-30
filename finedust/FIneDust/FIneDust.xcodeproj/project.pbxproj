@@ -11,7 +11,6 @@
 		1DA1E72A229F6DD000FE1752 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E729229F6DD000FE1752 /* MainVC.swift */; };
 		1DA1E72D229F6DD000FE1752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E72B229F6DD000FE1752 /* Main.storyboard */; };
 		1DA1E730229F6DD000FE1752 /* FIneDust.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E72E229F6DD000FE1752 /* FIneDust.xcdatamodeld */; };
-		1DA1E732229F6DD200FE1752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E731229F6DD200FE1752 /* Assets.xcassets */; };
 		1DA1E735229F6DD200FE1752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E733229F6DD200FE1752 /* LaunchScreen.storyboard */; };
 		1DA1E742229F6E7700FE1752 /* AirVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E741229F6E7700FE1752 /* AirVO.swift */; };
 		1DA1E744229F6E8E00FE1752 /* AirData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E743229F6E8E00FE1752 /* AirData.swift */; };
@@ -20,6 +19,7 @@
 		1DA1E74A229F6F0500FE1752 /* AirPollutionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E749229F6F0500FE1752 /* AirPollutionCell.swift */; };
 		1DA1E74C229F6F5600FE1752 /* CurrentStationNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E74B229F6F5600FE1752 /* CurrentStationNameVC.swift */; };
 		1DA1E752229F6FCF00FE1752 /* transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E751229F6FCF00FE1752 /* transition.swift */; };
+		1DA1E754229FB8A200FE1752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E753229FB8A200FE1752 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		1DA1E729229F6DD000FE1752 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1DA1E72C229F6DD000FE1752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DA1E72F229F6DD000FE1752 /* FIneDust.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FIneDust.xcdatamodel; sourceTree = "<group>"; };
-		1DA1E731229F6DD200FE1752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA1E734229F6DD200FE1752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA1E736229F6DD200FE1752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA1E741229F6E7700FE1752 /* AirVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirVO.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		1DA1E749229F6F0500FE1752 /* AirPollutionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPollutionCell.swift; sourceTree = "<group>"; };
 		1DA1E74B229F6F5600FE1752 /* CurrentStationNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStationNameVC.swift; sourceTree = "<group>"; };
 		1DA1E751229F6FCF00FE1752 /* transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transition.swift; sourceTree = "<group>"; };
+		1DA1E753229FB8A200FE1752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				1DA1E727229F6DD000FE1752 /* AppDelegate.swift */,
-				1DA1E731229F6DD200FE1752 /* Assets.xcassets */,
 				1DA1E751229F6FCF00FE1752 /* transition.swift */,
+				1DA1E753229FB8A200FE1752 /* Assets.xcassets */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA1E735229F6DD200FE1752 /* LaunchScreen.storyboard in Resources */,
-				1DA1E732229F6DD200FE1752 /* Assets.xcassets in Resources */,
+				1DA1E754229FB8A200FE1752 /* Assets.xcassets in Resources */,
 				1DA1E72D229F6DD000FE1752 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

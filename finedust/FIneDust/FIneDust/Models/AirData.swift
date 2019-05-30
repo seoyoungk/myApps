@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AirPollutionData {
     
@@ -84,5 +85,7 @@ class AirPollutionData {
         }
         return result
     }
+    
+    
 }
 
