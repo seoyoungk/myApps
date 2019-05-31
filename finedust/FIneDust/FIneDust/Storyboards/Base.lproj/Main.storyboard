@@ -28,8 +28,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="강남구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auU-xV-SpG">
-                                <rect key="frame" x="56" y="147" width="263" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="강남구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auU-xV-SpG">
+                                <rect key="frame" x="55" y="147" width="265" height="34"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="28"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,20 +46,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDO-Aw-Pkr">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDO-Aw-Pkr">
                                 <rect key="frame" x="0.0" y="517" width="375" height="261"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="대기오염정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-cu-Fxf">
-                                        <rect key="frame" x="120" y="5" width="134" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대기오염정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-cu-Fxf">
+                                        <rect key="frame" x="120" y="12.333333333333373" width="134" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fHL-oK-V4c">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fHL-oK-V4c">
                                         <rect key="frame" x="0.0" y="38" width="375" height="210"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="0.79611646079999998" blue="0.78916668020000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aJk-Eq-rIZ">
                                             <size key="itemSize" width="125" height="210"/>
@@ -117,6 +114,15 @@
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.79611646079999998" blue="0.78916668020000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="fHL-oK-V4c" firstAttribute="leading" secondItem="eDO-Aw-Pkr" secondAttribute="leading" id="0Qm-3d-5f7"/>
+                                    <constraint firstAttribute="bottom" secondItem="fHL-oK-V4c" secondAttribute="bottom" constant="13" id="67Q-aF-8oS"/>
+                                    <constraint firstItem="bd5-cu-Fxf" firstAttribute="leading" secondItem="eDO-Aw-Pkr" secondAttribute="leading" constant="120" id="6LP-hP-hZu"/>
+                                    <constraint firstAttribute="trailing" secondItem="fHL-oK-V4c" secondAttribute="trailing" id="6Sp-Pa-EU4"/>
+                                    <constraint firstAttribute="trailing" secondItem="bd5-cu-Fxf" secondAttribute="trailing" constant="121" id="USq-oQ-zPW"/>
+                                    <constraint firstItem="fHL-oK-V4c" firstAttribute="top" secondItem="bd5-cu-Fxf" secondAttribute="bottom" constant="5" id="kKg-rd-itE"/>
+                                    <constraint firstItem="bd5-cu-Fxf" firstAttribute="top" secondItem="eDO-Aw-Pkr" secondAttribute="top" constant="12.333333333333373" id="vcl-NK-Nzj"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="강남구" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atF-g3-s0P">
                                 <rect key="frame" x="315" y="74" width="39" height="21"/>
@@ -143,18 +149,23 @@
                         <color key="backgroundColor" red="1" green="0.79611646081882004" blue="0.7891666801563908" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="00t-pp-jxl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="07d-NN-Xum"/>
-                            <constraint firstItem="4x1-Df-7lw" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="5db-Aa-Cke"/>
+                            <constraint firstItem="4x1-Df-7lw" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="5db-Aa-Cke"/>
+                            <constraint firstItem="eDO-Aw-Pkr" firstAttribute="top" secondItem="fMZ-I2-I1F" secondAttribute="bottom" constant="35" id="9QW-bq-2cQ"/>
                             <constraint firstItem="JHA-yR-tH8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CFk-8v-qgN"/>
                             <constraint firstItem="auU-xV-SpG" firstAttribute="top" secondItem="4x1-Df-7lw" secondAttribute="bottom" constant="7" id="DmD-ue-gaZ"/>
                             <constraint firstItem="atF-g3-s0P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="G2h-tP-ooC"/>
                             <constraint firstItem="fMZ-I2-I1F" firstAttribute="top" relation="lessThanOrEqual" secondItem="00t-pp-jxl" secondAttribute="bottom" constant="30" id="GSh-90-NWG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="auU-xV-SpG" secondAttribute="trailing" constant="55" id="Gez-eR-8xS"/>
                             <constraint firstItem="4x1-Df-7lw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I6R-nv-848"/>
                             <constraint firstItem="fMZ-I2-I1F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UK8-K8-JrI"/>
+                            <constraint firstItem="eDO-Aw-Pkr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aBa-O2-5bu"/>
                             <constraint firstItem="o3e-NA-x7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ae2-W5-7MD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="atF-g3-s0P" secondAttribute="trailing" constant="30" id="dft-S2-dCX"/>
-                            <constraint firstItem="auU-xV-SpG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gS8-Hw-ygm"/>
+                            <constraint firstItem="auU-xV-SpG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="mR8-P2-tes"/>
+                            <constraint firstItem="eDO-Aw-Pkr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p8Q-fG-JAc"/>
                             <constraint firstItem="00t-pp-jxl" firstAttribute="top" relation="lessThanOrEqual" secondItem="JHA-yR-tH8" secondAttribute="bottom" constant="30" id="tF4-LS-Sv0"/>
                             <constraint firstItem="atF-g3-s0P" firstAttribute="leading" secondItem="o3e-NA-x7m" secondAttribute="trailing" constant="3" id="vsm-57-Cwi"/>
+                            <constraint firstItem="eDO-Aw-Pkr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wsq-m0-qlw"/>
                             <constraint firstItem="JHA-yR-tH8" firstAttribute="top" secondItem="auU-xV-SpG" secondAttribute="bottom" constant="8" id="zfd-oN-ZTc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
