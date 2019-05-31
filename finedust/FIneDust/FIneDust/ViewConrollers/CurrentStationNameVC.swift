@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 import CoreData
 
-class CurrentStationName: MainViewController {
+class CurrentStationName: MainVC {
     let stationLists = LocationData() // 근접 측정소 찾는 api 및 station 이름을 호출하는 클래스
     let coordinates = Transition() // latitude, longtitude -> TM_x, TM_y로 변환해주는 클래스
     let locationVO = LocationVO.sharedInstance

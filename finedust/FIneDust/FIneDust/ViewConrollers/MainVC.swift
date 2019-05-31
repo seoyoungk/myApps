@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, XMLParserDelegate {
+class MainVC: UIViewController, XMLParserDelegate {
     var airPollutionData = AirPollutionData()
     var airPollutionCount = 6
     
@@ -160,7 +160,7 @@ class MainViewController: UIViewController, XMLParserDelegate {
 }
 
 
-extension MainViewController: CLLocationManagerDelegate {
+extension MainVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let coordi = manager.location?.coordinate {
@@ -185,7 +185,7 @@ extension MainViewController: CLLocationManagerDelegate {
 }
 
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return airPollutionCount
     }

@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class LocationData: MainViewController {
+class LocationData: MainVC {
     
     var stationlists = [[String: Any]]()
     var stationlist = [String: Any]()
