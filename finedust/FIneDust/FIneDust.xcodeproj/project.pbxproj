@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00014760A6645BBF1EFD2101 /* Pods_FIneDust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45492C538DDEE39A742F3F4 /* Pods_FIneDust.framework */; };
 		1DA1E728229F6DD000FE1752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E727229F6DD000FE1752 /* AppDelegate.swift */; };
 		1DA1E72A229F6DD000FE1752 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E729229F6DD000FE1752 /* MainVC.swift */; };
 		1DA1E72D229F6DD000FE1752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E72B229F6DD000FE1752 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 		1DA1E74C229F6F5600FE1752 /* CurrentStationNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E74B229F6F5600FE1752 /* CurrentStationNameVC.swift */; };
 		1DA1E752229F6FCF00FE1752 /* transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1E751229F6FCF00FE1752 /* transition.swift */; };
 		1DA1E754229FB8A200FE1752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA1E753229FB8A200FE1752 /* Assets.xcassets */; };
+		89A9EC7E22A2425A0014BDB8 /* Designables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9EC7D22A2425A0014BDB8 /* Designables.swift */; };
+		89A9EC8022A2454E0014BDB8 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9EC7F22A2454E0014BDB8 /* Enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,11 @@
 		1DA1E74B229F6F5600FE1752 /* CurrentStationNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStationNameVC.swift; sourceTree = "<group>"; };
 		1DA1E751229F6FCF00FE1752 /* transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transition.swift; sourceTree = "<group>"; };
 		1DA1E753229FB8A200FE1752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89A9EC7D22A2425A0014BDB8 /* Designables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables.swift; sourceTree = "<group>"; };
+		89A9EC7F22A2454E0014BDB8 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		A45492C538DDEE39A742F3F4 /* Pods_FIneDust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIneDust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8AF13C6F3BD835846930428 /* Pods-FIneDust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIneDust.release.xcconfig"; path = "Target Support Files/Pods-FIneDust/Pods-FIneDust.release.xcconfig"; sourceTree = "<group>"; };
+		BC039D168F7796FE2A963F5C /* Pods-FIneDust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIneDust.debug.xcconfig"; path = "Target Support Files/Pods-FIneDust/Pods-FIneDust.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00014760A6645BBF1EFD2101 /* Pods_FIneDust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 			children = (
 				1DA1E726229F6DD000FE1752 /* FIneDust */,
 				1DA1E725229F6DD000FE1752 /* Products */,
+				880A6F3F2F5ACE153DB030B5 /* Pods */,
+				6EB61FD29B3C3E38BE60A319 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,10 +83,12 @@
 			children = (
 				1DA1E736229F6DD200FE1752 /* Info.plist */,
 				1DA1E72E229F6DD000FE1752 /* FIneDust.xcdatamodeld */,
+				1DA1E72B229F6DD000FE1752 /* Main.storyboard */,
+				1DA1E733229F6DD200FE1752 /* LaunchScreen.storyboard */,
+				1DA1E753229FB8A200FE1752 /* Assets.xcassets */,
+				1DA1E73F229F6E2400FE1752 /* AppDelegate */,
 				1DA1E73C229F6DFA00FE1752 /* Models */,
 				1DA1E73D229F6E0600FE1752 /* Views */,
-				1DA1E73E229F6E1900FE1752 /* Storyboards */,
-				1DA1E73F229F6E2400FE1752 /* Supports */,
 				1DA1E740229F6E3800FE1752 /* ViewConrollers */,
 			);
 			path = FIneDust;
@@ -100,23 +113,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1DA1E73E229F6E1900FE1752 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				1DA1E72B229F6DD000FE1752 /* Main.storyboard */,
-				1DA1E733229F6DD200FE1752 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		1DA1E73F229F6E2400FE1752 /* Supports */ = {
+		1DA1E73F229F6E2400FE1752 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				1DA1E727229F6DD000FE1752 /* AppDelegate.swift */,
 				1DA1E751229F6FCF00FE1752 /* transition.swift */,
-				1DA1E753229FB8A200FE1752 /* Assets.xcassets */,
+				89A9EC7D22A2425A0014BDB8 /* Designables.swift */,
+				89A9EC7F22A2454E0014BDB8 /* Enum.swift */,
 			);
-			path = Supports;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		1DA1E740229F6E3800FE1752 /* ViewConrollers */ = {
@@ -128,6 +133,23 @@
 			path = ViewConrollers;
 			sourceTree = "<group>";
 		};
+		6EB61FD29B3C3E38BE60A319 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A45492C538DDEE39A742F3F4 /* Pods_FIneDust.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		880A6F3F2F5ACE153DB030B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC039D168F7796FE2A963F5C /* Pods-FIneDust.debug.xcconfig */,
+				B8AF13C6F3BD835846930428 /* Pods-FIneDust.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA1E739229F6DD200FE1752 /* Build configuration list for PBXNativeTarget "FIneDust" */;
 			buildPhases = (
+				AEF79DBE80D2156E8E3C92B7 /* [CP] Check Pods Manifest.lock */,
 				1DA1E720229F6DD000FE1752 /* Sources */,
 				1DA1E721229F6DD000FE1752 /* Frameworks */,
 				1DA1E722229F6DD000FE1752 /* Resources */,
+				89A9EC7C22A240BC0014BDB8 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -194,6 +218,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89A9EC7C22A240BC0014BDB8 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		AEF79DBE80D2156E8E3C92B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIneDust-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1DA1E720229F6DD000FE1752 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,6 +268,8 @@
 			files = (
 				1DA1E74C229F6F5600FE1752 /* CurrentStationNameVC.swift in Sources */,
 				1DA1E72A229F6DD000FE1752 /* MainVC.swift in Sources */,
+				89A9EC8022A2454E0014BDB8 /* Enum.swift in Sources */,
+				89A9EC7E22A2425A0014BDB8 /* Designables.swift in Sources */,
 				1DA1E744229F6E8E00FE1752 /* AirData.swift in Sources */,
 				1DA1E730229F6DD000FE1752 /* FIneDust.xcdatamodeld in Sources */,
 				1DA1E74A229F6F0500FE1752 /* AirPollutionCell.swift in Sources */,
@@ -352,11 +421,12 @@
 		};
 		1DA1E73A229F6DD200FE1752 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC039D168F7796FE2A963F5C /* Pods-FIneDust.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T49KR6B34C;
 				INFOPLIST_FILE = FIneDust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,11 +442,12 @@
 		};
 		1DA1E73B229F6DD200FE1752 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8AF13C6F3BD835846930428 /* Pods-FIneDust.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T49KR6B34C;
 				INFOPLIST_FILE = FIneDust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

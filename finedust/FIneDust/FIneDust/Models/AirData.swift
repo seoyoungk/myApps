@@ -10,19 +10,19 @@ import Foundation
 import UIKit
 
 class AirPollutionData {
-    
+
     enum TypeCategory {
         case dataTime, khaiValue, pm10Value, no2Value, coValue, o3Value, so2Value, khaiGrade, so2Grade, coGrade, o3Grade, no2Grade, pm10Grade
     }
-    
+
     func getCurrentData(_ data: Any) -> AirPollutionVO? {
         guard let items = data as? [[String: Any]],
             let item = items.first else {
                 return nil
         }
-        
+
         var airPollution = AirPollutionVO()
-        
+
         for (key, value) in item {
             switch key {
             case "dataTime":
@@ -56,11 +56,11 @@ class AirPollutionData {
         }
         return airPollution
     }
-    
+
     // 추출한 데이터 -> 문자열로 변환
     private func convertToString(_ type: TypeCategory, value: Any) -> String {
         var result = ""
-        
+
         switch type {
         case .dataTime, .khaiValue:
             result = "\(value)"
@@ -70,7 +70,7 @@ class AirPollutionData {
             result = ("\(value)" == "-") ? "-" : "\(value)㎍/㎥"
         case .khaiGrade, .so2Grade, .coGrade, .o3Grade, .no2Grade, .pm10Grade:
             let grade = "\(value)"
-            
+
             if grade == "1" {
                 result = "좋음"
             } else if grade == "2" {
@@ -85,7 +85,5 @@ class AirPollutionData {
         }
         return result
     }
-    
-    
-}
 
+}
