@@ -89,7 +89,7 @@
 				1DA1E73F229F6E2400FE1752 /* AppDelegate */,
 				1DA1E73C229F6DFA00FE1752 /* Models */,
 				1DA1E73D229F6E0600FE1752 /* Views */,
-				1DA1E740229F6E3800FE1752 /* ViewConrollers */,
+				1DA1E740229F6E3800FE1752 /* ViewControllers */,
 			);
 			path = FIneDust;
 			sourceTree = "<group>";
@@ -124,13 +124,13 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		1DA1E740229F6E3800FE1752 /* ViewConrollers */ = {
+		1DA1E740229F6E3800FE1752 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1DA1E729229F6DD000FE1752 /* MainVC.swift */,
 				1DA1E74B229F6F5600FE1752 /* CurrentStationNameVC.swift */,
 			);
-			path = ViewConrollers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6EB61FD29B3C3E38BE60A319 /* Frameworks */ = {
@@ -426,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T49KR6B34C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FIneDust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T49KR6B34C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FIneDust/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

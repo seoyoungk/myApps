@@ -65,6 +65,7 @@ class MainVC: UIViewController, XMLParserDelegate {
     // refreshControl 액션
     @objc func pullToRefresh() {
         locationManager.startUpdatingLocation()
+        timeUpdate()
         if let refreshControl = refreshControl {
             refreshControl.endRefreshing()
         }
@@ -95,6 +96,10 @@ class MainVC: UIViewController, XMLParserDelegate {
             #if DEBUG
             print("Successfully Parsed")
             #endif
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Parsing failed", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(alert, animated: false)
         }
     }
     // xml parser
@@ -104,9 +109,11 @@ class MainVC: UIViewController, XMLParserDelegate {
     }
 
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        if blank == true && elementTemp != "response" && elementTemp != "header" && elementTemp != "resultCode" && elementTemp != "resultMsg" && elementTemp != "body" {
+        if blank == true && elementTemp != "response" && elementTemp != "header" && elementTemp != "body" {
+            // elementTemp != "resultCode" && elementTemp != "resultMsg" &&
             list[elementTemp] = string.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
+
         #if DEBUG
         print("string: \(string)")
         print("item: \(list)")
@@ -117,8 +124,16 @@ class MainVC: UIViewController, XMLParserDelegate {
         if elementName == "item" {
             lists += [list]
         }
-        blank = false
 
+        blank = false
+        // api 호출 실패 시 해당 error message를 경고창으로 띄움
+        if let resultCode = list["resultCode"] as? String, resultCode != "00",
+            let resultMsg = list["resultMsg"] as? String {
+            let alert = UIAlertController(title: "Error", message: "Parsing failed: \(resultMsg)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(alert, animated: false)
+        }
+        
         #if DEBUG
         print("end: \(elementName)")
         print("---------------------------------------")
@@ -128,8 +143,8 @@ class MainVC: UIViewController, XMLParserDelegate {
         // 현재 대기상태 label 업데이트
         self.currentConditionLabel.text = airPollutionData.getCurrentData(lists)?.khaiGrade ?? ""
         self.conditionImageUpdate(airPollutionData.getCurrentData(lists)?.khaiGrade ?? "")
-        self.collectionView.reloadData()
         self.timeUpdate()
+        self.collectionView.reloadData()
     }
 
     private func conditionImageUpdate(_ status: String) {
@@ -138,12 +153,16 @@ class MainVC: UIViewController, XMLParserDelegate {
         switch status {
         case "좋음":
             image = UIImage(named: "01good.png")
+            self.view.backgroundColor = UIColor(hex: 0x5AEDF2)
         case "보통":
             image = UIImage(named: "02nomal.png")
+            self.view.backgroundColor = UIColor(hex: 0x64E579)
         case "나쁨":
             image = UIImage(named: "03bad.png")
+            self.view.backgroundColor = UIColor(hex: 0xEDAC49)
         case "매우나쁨":
             image = UIImage(named: "04sucks.png")
+            self.view.backgroundColor = UIColor(hex: 0xFF4831)
         default:
             break
         }
@@ -238,6 +257,19 @@ extension MainVC {
         }
         cell.setConditionImage()
         return cell
+    }
+
+}
+
+extension UIColor {
+
+    convenience init(hex: Int) {
+        let components = (
+            R: CGFloat((hex >> 16) & 0xff) / 255,
+            G: CGFloat((hex >> 08) & 0xff) / 255,
+            B: CGFloat((hex >> 00) & 0xff) / 255
+        )
+        self.init(red: components.R, green: components.G, blue: components.B, alpha: 1)
     }
 
 }
