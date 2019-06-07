@@ -36,7 +36,7 @@ class MainVC: UIViewController, XMLParserDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchButton.isHidden = true
         // refreshControl / 당겨서 새로 고침
         refreshControl = UIRefreshControl()
         refreshControl?.tintColor = UIColor(red: 51, green: 124, blue: 130, alpha: 1.0)

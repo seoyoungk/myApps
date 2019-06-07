@@ -27,16 +27,16 @@ class SearchLocationVC: UITableViewController {
 
     func getCurrentLocationFromMapAPI() {
 
-        let param: Parameters = [:]
-        let urlString = "https://dapi.kakao.com/v2/local/search/address.json?query=서울시 강남구 삼성동"
+        let param: Parameters = ["query": "강남구"]
+        let urlString = "https://dapi.kakao.com/v2/local/search/address.json"
         let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
 
         guard let url = URL(string: encoded) else {
             NSLog("parsing error!")
             return
         }
-        
-        Alamofire.request(url, method: .get, parameters: param, encoding: JSONEncoding.prettyPrinted, headers: ["Authorization": "KakaoAK 24e93a6eead4d50435fec4c48ce3603e"])
+
+        Alamofire.request(url, method: .get, parameters: param, encoding: JSONEncoding.default, headers: ["Authorization": "KakaoAK 07563fdd6fec79279c07ee88d930f118"])
         .validate().responseJSON { response in
             guard response.result.isSuccess else {
                 NSLog("Error while fetching remote: \(String(describing: response.result.error))")
@@ -48,9 +48,7 @@ class SearchLocationVC: UITableViewController {
                     NSLog("document error")
                     return
             }
-            #if DEBUG
-            print("document = \(document)")
-            #endif
+
             for index in 0...(document.count - 1) {
                 let documents = document[index] as? NSDictionary ?? ["":""]
                 self.tmX.append(documents["x"] as? String ?? "")
@@ -60,7 +58,6 @@ class SearchLocationVC: UITableViewController {
         }
 
     }
-
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -73,31 +70,3 @@ class SearchLocationVC: UITableViewController {
     }
 
 }
-//func getCurrentLocationFromMapAPI() {
-//    let urlString = "https://dapi.kakao.com/v2/local/search/address.json?query=서울시 강남구 삼성동"
-//
-//    guard let url = URL(string: urlString) else {
-//        NSLog("parsing error!")
-//        return
-//    }
-//
-//    Alamofire.request(url, method: .get, encoding: JSONEncoding.prettyPrinted, headers: ["Authorization": "KakaoAK 24e93a6eead4d50435fec4c48ce3603e"])
-//        .validate().responseJSON{ response in
-//            guard response.result.isSuccess else {
-//                NSLog("Error while fetching remote: \(String(describing: response.result.error))")
-//                return
-//            }
-//            let data = try! Data(contentsOf: url)
-//            NSLog("data : \(data)")
-//            let result = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-//            NSLog("result = \(result)")
-//
-//            let document = result["documents"] as! NSArray
-//            for index in 0...(document.count - 1) {
-//                let documents = document[index] as! NSDictionary
-//                self.tmX.append(documents["x"] as! String)
-//                self.tmY.append(documents["y"] as! String)
-//            }
-//            NSLog("tmX = \(self.tmX), tmY = \(self.tmY)")
-//    }
-//}
