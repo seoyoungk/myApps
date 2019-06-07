@@ -18,6 +18,7 @@ class MainVC: UIViewController, XMLParserDelegate {
     @IBOutlet weak var currentConditionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var searchButton: UIButton!
 
     var airPollutionData = AirPollutionData()
     var airPollutionCount = 6
@@ -133,7 +134,7 @@ class MainVC: UIViewController, XMLParserDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(alert, animated: false)
         }
-        
+
         #if DEBUG
         print("end: \(elementName)")
         print("---------------------------------------")
@@ -153,16 +154,16 @@ class MainVC: UIViewController, XMLParserDelegate {
         switch status {
         case "좋음":
             image = UIImage(named: "01good.png")
-            self.view.backgroundColor = UIColor(hex: 0x5AEDF2)
+            self.view.backgroundColor = UIColor(hex: 0x15D4F4)
         case "보통":
             image = UIImage(named: "02nomal.png")
-            self.view.backgroundColor = UIColor(hex: 0x64E579)
+            self.view.backgroundColor = UIColor(hex: 0x01A651)
         case "나쁨":
             image = UIImage(named: "03bad.png")
-            self.view.backgroundColor = UIColor(hex: 0xEDAC49)
+            self.view.backgroundColor = UIColor(hex: 0xF4AC55)
         case "매우나쁨":
             image = UIImage(named: "04sucks.png")
-            self.view.backgroundColor = UIColor(hex: 0xFF4831)
+            self.view.backgroundColor = UIColor(hex: 0xED3F22)
         default:
             break
         }

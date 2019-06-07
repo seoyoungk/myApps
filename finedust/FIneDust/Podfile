@@ -1,6 +1,5 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-
 use_frameworks!
 
 target 'FIneDust' do
@@ -8,5 +7,5 @@ target 'FIneDust' do
   inhibit_all_warnings!
 
   pod 'SwiftLint'
-
+  pod 'Alamofire', '~> 4.7' 
 end
