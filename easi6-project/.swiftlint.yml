@@ -1,0 +1,12 @@
+disabled_rules :
+  - line_length
+  - file_length
+  - function_body_length
+  # - type_body_length
+
+included:
+
+excluded:
+  - easi6-project/AppDelegate
+  - Carthage
+  - Pods

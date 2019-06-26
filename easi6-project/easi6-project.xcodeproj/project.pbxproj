@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDDD7E022C082F5001FF9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD7DF22C082F5001FF9EE /* AppDelegate.swift */; };
+		1DDDD7E222C082F5001FF9EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD7E122C082F5001FF9EE /* ViewController.swift */; };
+		1DDDD7E522C082F5001FF9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD7E322C082F5001FF9EE /* Main.storyboard */; };
+		1DDDD7E822C082F5001FF9EE /* easi6_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD7E622C082F5001FF9EE /* easi6_project.xcdatamodeld */; };
+		1DDDD7EA22C082F6001FF9EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD7E922C082F6001FF9EE /* Assets.xcassets */; };
+		1DDDD7ED22C082F6001FF9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD7EB22C082F6001FF9EE /* LaunchScreen.storyboard */; };
+		1DDDD7F822C082F6001FF9EE /* easi6_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD7F722C082F6001FF9EE /* easi6_projectUITests.swift */; };
+		1DDDD80322C088F7001FF9EE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDDD80222C088F7001FF9EE /* Alamofire.framework */; };
+		1DDDD80522C09AA4001FF9EE /* ItemListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD80422C09AA4001FF9EE /* ItemListCell.swift */; };
+		1DDDD80722C0A9CD001FF9EE /* LocationVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDD80622C0A9CD001FF9EE /* LocationVO.swift */; };
+		A3F923EB95C52515622EA2F8 /* Pods_easi6_projectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FFCF7ADAA2BF25CDEA0F02 /* Pods_easi6_projectUITests.framework */; };
+		CD1D1AC487C823A3A46AC97E /* Pods_easi6_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E5CC066027182EB342A8B6 /* Pods_easi6_project.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DDDD7F422C082F6001FF9EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DDDD7D422C082F5001FF9EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DDDD7DB22C082F5001FF9EE;
+			remoteInfo = "easi6-project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006E0256C1E2F16C67987AFB /* Pods-easi6-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easi6-project.release.xcconfig"; path = "Target Support Files/Pods-easi6-project/Pods-easi6-project.release.xcconfig"; sourceTree = "<group>"; };
+		1DDDD7DC22C082F5001FF9EE /* easi6-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "easi6-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDDD7DF22C082F5001FF9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DDDD7E122C082F5001FF9EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DDDD7E422C082F5001FF9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DDDD7E722C082F5001FF9EE /* easi6_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = easi6_project.xcdatamodel; sourceTree = "<group>"; };
+		1DDDD7E922C082F6001FF9EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DDDD7EC22C082F6001FF9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DDDD7EE22C082F6001FF9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DDDD7F322C082F6001FF9EE /* easi6-projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "easi6-projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDDD7F722C082F6001FF9EE /* easi6_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easi6_projectUITests.swift; sourceTree = "<group>"; };
+		1DDDD7F922C082F6001FF9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DDDD80222C088F7001FF9EE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDDD80422C09AA4001FF9EE /* ItemListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCell.swift; sourceTree = "<group>"; };
+		1DDDD80622C0A9CD001FF9EE /* LocationVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVO.swift; sourceTree = "<group>"; };
+		65E5CC066027182EB342A8B6 /* Pods_easi6_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easi6_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D11BB740B40423240B6A70A /* Pods-easi6-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easi6-project.debug.xcconfig"; path = "Target Support Files/Pods-easi6-project/Pods-easi6-project.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1F1FB7FAFEB8BD430BC9E4 /* Pods-easi6-projectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easi6-projectUITests.debug.xcconfig"; path = "Target Support Files/Pods-easi6-projectUITests/Pods-easi6-projectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB4D7E516153584FB57DE96 /* Pods-easi6-projectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easi6-projectUITests.release.xcconfig"; path = "Target Support Files/Pods-easi6-projectUITests/Pods-easi6-projectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F4FFCF7ADAA2BF25CDEA0F02 /* Pods_easi6_projectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easi6_projectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DDDD7D922C082F5001FF9EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDDD80322C088F7001FF9EE /* Alamofire.framework in Frameworks */,
+				CD1D1AC487C823A3A46AC97E /* Pods_easi6_project.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DDDD7F022C082F6001FF9EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F923EB95C52515622EA2F8 /* Pods_easi6_projectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DDDD7D322C082F4001FF9EE = {
+			isa = PBXGroup;
+			children = (
+				1DDDD7DE22C082F5001FF9EE /* easi6-project */,
+				1DDDD7F622C082F6001FF9EE /* easi6-projectUITests */,
+				1DDDD7DD22C082F5001FF9EE /* Products */,
+				2B633E5ACEBE944086CBB1BA /* Pods */,
+				C6DFE29734FC767430E1A2E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DDDD7DD22C082F5001FF9EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DDDD7DC22C082F5001FF9EE /* easi6-project.app */,
+				1DDDD7F322C082F6001FF9EE /* easi6-projectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DDDD7DE22C082F5001FF9EE /* easi6-project */ = {
+			isa = PBXGroup;
+			children = (
+				1DDDD7DF22C082F5001FF9EE /* AppDelegate.swift */,
+				1DDDD7E122C082F5001FF9EE /* ViewController.swift */,
+				1DDDD80622C0A9CD001FF9EE /* LocationVO.swift */,
+				1DDDD80422C09AA4001FF9EE /* ItemListCell.swift */,
+				1DDDD7E322C082F5001FF9EE /* Main.storyboard */,
+				1DDDD7E922C082F6001FF9EE /* Assets.xcassets */,
+				1DDDD7EB22C082F6001FF9EE /* LaunchScreen.storyboard */,
+				1DDDD7EE22C082F6001FF9EE /* Info.plist */,
+				1DDDD7E622C082F5001FF9EE /* easi6_project.xcdatamodeld */,
+			);
+			path = "easi6-project";
+			sourceTree = "<group>";
+		};
+		1DDDD7F622C082F6001FF9EE /* easi6-projectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DDDD7F722C082F6001FF9EE /* easi6_projectUITests.swift */,
+				1DDDD7F922C082F6001FF9EE /* Info.plist */,
+			);
+			path = "easi6-projectUITests";
+			sourceTree = "<group>";
+		};
+		2B633E5ACEBE944086CBB1BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D11BB740B40423240B6A70A /* Pods-easi6-project.debug.xcconfig */,
+				006E0256C1E2F16C67987AFB /* Pods-easi6-project.release.xcconfig */,
+				AE1F1FB7FAFEB8BD430BC9E4 /* Pods-easi6-projectUITests.debug.xcconfig */,
+				CDB4D7E516153584FB57DE96 /* Pods-easi6-projectUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6DFE29734FC767430E1A2E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DDDD80222C088F7001FF9EE /* Alamofire.framework */,
+				65E5CC066027182EB342A8B6 /* Pods_easi6_project.framework */,
+				F4FFCF7ADAA2BF25CDEA0F02 /* Pods_easi6_projectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DDDD7DB22C082F5001FF9EE /* easi6-project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DDDD7FC22C082F6001FF9EE /* Build configuration list for PBXNativeTarget "easi6-project" */;
+			buildPhases = (
+				BAA3C25EB8226A2F8C790348 /* [CP] Check Pods Manifest.lock */,
+				1DDDD7D822C082F5001FF9EE /* Sources */,
+				1DDDD7D922C082F5001FF9EE /* Frameworks */,
+				1DDDD7DA22C082F5001FF9EE /* Resources */,
+				CA98112DA2BF1900E911FBBC /* [CP] Embed Pods Frameworks */,
+				583B8FF50930E896136FB698 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "easi6-project";
+			productName = "easi6-project";
+			productReference = 1DDDD7DC22C082F5001FF9EE /* easi6-project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DDDD7F222C082F6001FF9EE /* easi6-projectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DDDD7FF22C082F6001FF9EE /* Build configuration list for PBXNativeTarget "easi6-projectUITests" */;
+			buildPhases = (
+				DBE43F5674D41C4996012C8E /* [CP] Check Pods Manifest.lock */,
+				1DDDD7EF22C082F6001FF9EE /* Sources */,
+				1DDDD7F022C082F6001FF9EE /* Frameworks */,
+				1DDDD7F122C082F6001FF9EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DDDD7F522C082F6001FF9EE /* PBXTargetDependency */,
+			);
+			name = "easi6-projectUITests";
+			productName = "easi6-projectUITests";
+			productReference = 1DDDD7F322C082F6001FF9EE /* easi6-projectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DDDD7D422C082F5001FF9EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Seoyoung;
+				TargetAttributes = {
+					1DDDD7DB22C082F5001FF9EE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					1DDDD7F222C082F6001FF9EE = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 1DDDD7DB22C082F5001FF9EE;
+					};
+				};
+			};
+			buildConfigurationList = 1DDDD7D722C082F5001FF9EE /* Build configuration list for PBXProject "easi6-project" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DDDD7D322C082F4001FF9EE;
+			productRefGroup = 1DDDD7DD22C082F5001FF9EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DDDD7DB22C082F5001FF9EE /* easi6-project */,
+				1DDDD7F222C082F6001FF9EE /* easi6-projectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DDDD7DA22C082F5001FF9EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDDD7ED22C082F6001FF9EE /* LaunchScreen.storyboard in Resources */,
+				1DDDD7EA22C082F6001FF9EE /* Assets.xcassets in Resources */,
+				1DDDD7E522C082F5001FF9EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DDDD7F122C082F6001FF9EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		583B8FF50930E896136FB698 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-easi6-project/Pods-easi6-project-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-easi6-project/Pods-easi6-project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA3C25EB8226A2F8C790348 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-easi6-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA98112DA2BF1900E911FBBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-easi6-project/Pods-easi6-project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-easi6-project/Pods-easi6-project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE43F5674D41C4996012C8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-easi6-projectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DDDD7D822C082F5001FF9EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDDD80522C09AA4001FF9EE /* ItemListCell.swift in Sources */,
+				1DDDD7E222C082F5001FF9EE /* ViewController.swift in Sources */,
+				1DDDD7E822C082F5001FF9EE /* easi6_project.xcdatamodeld in Sources */,
+				1DDDD7E022C082F5001FF9EE /* AppDelegate.swift in Sources */,
+				1DDDD80722C0A9CD001FF9EE /* LocationVO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DDDD7EF22C082F6001FF9EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDDD7F822C082F6001FF9EE /* easi6_projectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DDDD7F522C082F6001FF9EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DDDD7DB22C082F5001FF9EE /* easi6-project */;
+			targetProxy = 1DDDD7F422C082F6001FF9EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DDDD7E322C082F5001FF9EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDDD7E422C082F5001FF9EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DDDD7EB22C082F6001FF9EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDDD7EC22C082F6001FF9EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DDDD7FA22C082F6001FF9EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		1DDDD7FB22C082F6001FF9EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DDDD7FD22C082F6001FF9EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D11BB740B40423240B6A70A /* Pods-easi6-project.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "easi6-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seoyoung.easi6-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DDDD7FE22C082F6001FF9EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 006E0256C1E2F16C67987AFB /* Pods-easi6-project.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "easi6-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seoyoung.easi6-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DDDD80022C082F6001FF9EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE1F1FB7FAFEB8BD430BC9E4 /* Pods-easi6-projectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "easi6-projectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seoyoung.easi6-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "easi6-project";
+			};
+			name = Debug;
+		};
+		1DDDD80122C082F6001FF9EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB4D7E516153584FB57DE96 /* Pods-easi6-projectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "easi6-projectUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seoyoung.easi6-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "easi6-project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DDDD7D722C082F5001FF9EE /* Build configuration list for PBXProject "easi6-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DDDD7FA22C082F6001FF9EE /* Debug */,
+				1DDDD7FB22C082F6001FF9EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DDDD7FC22C082F6001FF9EE /* Build configuration list for PBXNativeTarget "easi6-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DDDD7FD22C082F6001FF9EE /* Debug */,
+				1DDDD7FE22C082F6001FF9EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DDDD7FF22C082F6001FF9EE /* Build configuration list for PBXNativeTarget "easi6-projectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DDDD80022C082F6001FF9EE /* Debug */,
+				1DDDD80122C082F6001FF9EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DDDD7E622C082F5001FF9EE /* easi6_project.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DDDD7E722C082F5001FF9EE /* easi6_project.xcdatamodel */,
+			);
+			currentVersion = 1DDDD7E722C082F5001FF9EE /* easi6_project.xcdatamodel */;
+			path = easi6_project.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DDDD7D422C082F5001FF9EE /* Project object */;
+}
